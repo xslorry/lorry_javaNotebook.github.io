@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namesapce绑定一个个对应的Dao/mapper接口-->
+<mapper namespace="com.lorry.mapper.UserMapper">
+    <select id="getUserList" resultType="com.lorry.pojo.User">
+        select * from mybatis.user
+    </select>
+
+    <select id="getUserById" parameterType="int" resultType="com.lorry.pojo.User">
+        select * from mybatis.user where user_id = #{id}
+    </select>
+
+    <insert id="addUser" parameterType="com.lorry.pojo.User">
+        insert into mybatis.user(user_id, user_name, user_pwd) value (#{user_id}, #{user_name}, #{user_pwd});
+    </insert>
+
+    <update id="updateUser" parameterType="com.lorry.pojo.User">
+        update mybatis.user
+        set user_name=#{user_name}, user_pwd=#{user_pwd}
+        where user_id=#{user_id};
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        delete
+        from mybatis.user
+        where user_id=#{user_id};
+    </delete>
+    <!--使用map，传递map中的key, 实体类或数据库里面的表字段或者参数过多，考虑使用map-->
+    <insert id="addUser2" parameterType="map">
+        insert into mybatis.user(user_id, user_name, user_pwd) value (#{id}, #{name}, #{pwd});
+    </insert>
+
+    <select id="getUserById2" parameterType="map" resultType="com.lorry.pojo.User">
+        select * from mybatis.user where user_id = #{id} and user_name = #{name}
+    </select>
+    <select id="getUserLike" resultType="com.lorry.pojo.User">
+            select * from mybatis.user where user_name like concat('%',#{name},'%');
+    </select>
+</mapper>

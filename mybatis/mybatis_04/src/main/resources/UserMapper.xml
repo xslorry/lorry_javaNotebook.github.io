@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namesapce绑定一个个对应的Dao/mapper接口-->
+<mapper namespace="com.lorry.mapper.UserMapper">
+<!--结果集映射-->
+    <resultMap id="UserMap" type="user">
+        <!--column数据库中的字段，property实体类中的属性-->
+<!--        <result column="user_id" property="user_id"/>-->
+<!--        <result column="user_name" property="user_name"/>-->
+        <result column="user_pwd" property="user_password"/>
+    </resultMap>
+    <select id="getUserById" parameterType="int" resultMap="UserMap">
+           select * from mybatis.user where user_id = #{id}
+
+    </select>
+<!--select user_id,user_name,user_pwd as user_password from mybatis.user where user_id = #{id}-->
+<!--数据库字段和实体类字段不一致，查询出会出现null，这时候可以采用起别名 as来解决-->
+<!--resultmap也可以解决-->
+<!--//分页-->
+    <select id="getUserByLimit" parameterType="map" resultType="User">
+        select * from mybatis.user limit #{startIndex},#{endIndex}
+    </select>
+
+    <!--//分页2-->
+    <select id="getUserByRowBounds" parameterType="map" resultMap="UserMap">
+        select * from mybatis.user
+    </select>
+</mapper>

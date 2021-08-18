@@ -1,0 +1,5 @@
+mybatis使用注解
+在mybatis-config配置properties
+typeAliases
+在UserMapper.xml中使用注解
+配置mapper的方法

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lorry.mapper.StudentMapper">
+
+    <select id="getStudent" resultMap="StudentTeacher">
+        select * from Student
+    </select>
+    <resultMap id="StudentTeacher" type="Student">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <!--多对一处理，1。查询出所有的学生信息 2。根据查询出来的学生的tid，寻找对应的老师-->
+        <!--复杂的属性，我们需要单独处理-->
+        <!--对象就用 association-->
+        <!--集合使用 collection-->
+        <!--复杂的属性，我们需要单独处理，我们用association来操作对象，并加了javaType和select 用select来找Teacher-->
+        <!--用这个column tid去查老师-->
+        <association property="teacher" column="tid" javaType="teacher" select="getTeacher"/>
+    </resultMap>
+    <select id="getTeacher" resultType="Teacher">
+        select * from teacher where id=#{tid}
+    </select>
+<!--    <select id="getStudent" resultType="Student">-->
+<!--        select * from mybatis.student-->
+<!--    </select>-->
+</mapper>
+
+

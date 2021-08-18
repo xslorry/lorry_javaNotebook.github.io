@@ -1,0 +1,3 @@
+日志的操作
+STDOUT_LOGGING
+LOG4J
