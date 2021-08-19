@@ -1,5 +1,5 @@
 # 第一个mybatis程序
-
+![img](https:\\github.com\xslorry\lorry_javaNotebook.github.io\tree\main\mybatis笔记.assets\kuangstudyd0e12f71-934d-4aff-ac34-f37036d8a50e.png)
 ## 搭建环境
 
 ### 搭建数据库
@@ -455,7 +455,7 @@ public class Author {
 
 # 生命周期和作用域
 
-![img](D:\java笔记\mybatis笔记.assets\kuangstudyd0e12f71-934d-4aff-ac34-f37036d8a50e.png)
+![img](https:\\github.com\xslorry\lorry_javaNotebook.github.io\tree\main\mybatis笔记.assets\kuangstudyd0e12f71-934d-4aff-ac34-f37036d8a50e.png)
 
 生命周期和作用域是至关重要的，因为错误的使用会导致非常严重的并发问题
 
