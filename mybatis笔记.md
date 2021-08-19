@@ -455,7 +455,7 @@ public class Author {
 
 # 生命周期和作用域
 
-![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets\kuangstudyd0e12f71-934d-4aff-ac34-f37036d8a50e.png)
+![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets/kuangstudyd0e12f71-934d-4aff-ac34-f37036d8a50e.png)
 
 生命周期和作用域是至关重要的，因为错误的使用会导致非常严重的并发问题
 
