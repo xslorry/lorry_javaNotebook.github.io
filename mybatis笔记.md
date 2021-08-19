@@ -1,5 +1,5 @@
 # 第一个mybatis程序
-![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets/image-20210725152739364.png)
+
 ## 搭建环境
 
 ### 搭建数据库
@@ -455,7 +455,7 @@ public class Author {
 
 # 生命周期和作用域
 
-![img](https:\\github.com\xslorry\lorry_javaNotebook.github.io\tree\main\mybatis笔记.assets\kuangstudyd0e12f71-934d-4aff-ac34-f37036d8a50e.png)
+![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets\kuangstudyd0e12f71-934d-4aff-ac34-f37036d8a50e.png)
 
 生命周期和作用域是至关重要的，因为错误的使用会导致非常严重的并发问题
 
@@ -482,13 +482,13 @@ SqlSessionFactory可以创建多个SqlSession，每个sqlSession都可以创建�
 
 一个Mapper代表着一个具体的业务
 
-![img](D:\java笔记\mybatis笔记.assets\kuangstudye32c7f81-214f-4c63-b370-d8249cdeff5c.png)
+![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets/kuangstudye32c7f81-214f-4c63-b370-d8249cdeff5c.png)
 
 # 解决属性名和字段名不一致的问题
 
 数据库中的字段
 
-![image-20210725152739364](D:\java笔记\mybatis笔记.assets\image-20210725152739364.png)
+![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets/image-20210725152739364.png)
 
 实体类的属性
 
@@ -614,7 +614,7 @@ log4j.logger.java.sql.PreparedStatement=DEBUG
 1. 在使用Log4j的类中，导入包import org.apache.log4j.Logger;
 2. 由于多个类会使用，设置为静态
 
-![](D:\java笔记\mybatis笔记.assets\image-20210725163324898.png)
+![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets/image-20210725163324898.png)
 
 ```java
 logger.info("info:进入了testLog4j");
@@ -807,7 +807,7 @@ public interface UserMapper02 {
 
 1. 在IDEA中安装Lombok插件
 
-![image-20210725195905638](D:\java笔记\mybatis笔记.assets\image-20210725195905638.png)
+![ima](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets/image-20210725195905638.png)
 
 
 
@@ -1230,7 +1230,7 @@ public void queryUserById(){
 }
 ```
 
-![img](D:\java笔记\mybatis笔记.assets\kuangstudyd485aa2d-ce15-4227-9902-251ebc718db3.png)
+![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets/kuangstudyd485aa2d-ce15-4227-9902-251ebc718db3.png)
 
 2. 增删改操作，可能会改变原来的数据，所以必定会刷新缓存！
 
@@ -1249,7 +1249,7 @@ public void queryUserById(){
 }
 ```
 
-![img](D:\java笔记\mybatis笔记.assets\kuangstudyf53fb35b-30dd-47c8-9c53-b613cd05d222.png)
+![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets/kuangstudyf53fb35b-30dd-47c8-9c53-b613cd05d222.png)
 
 3. 查询不同的Mapper.xml
 4. 手动清理缓存！
@@ -1270,7 +1270,7 @@ public void queryUserById(){
 }
 ```
 
-![img](D:\java笔记\mybatis笔记.assets\kuangstudy60d048f1-349a-475e-9baf-b00a4858e68b.png)
+![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets/kuangstudy60d048f1-349a-475e-9baf-b00a4858e68b.png)
 
 ## 二级缓存
 
@@ -1328,7 +1328,7 @@ sqlSession2.close();
 }
 ```
 
-![img](D:\java笔记\mybatis笔记.assets\kuangstudy58c20070-fffe-4753-aace-3fdd84e7e05a.png)
+![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets/kuangstudy58c20070-fffe-4753-aace-3fdd84e7e05a.png)
 
 **问题：**我们需要将实体类序列化！否则就会报错！
 
@@ -1344,7 +1344,7 @@ Caused by: java.io.NotSerializableException: com.bin.pojo.User
 
 ## 缓存原理
 
-![img](D:\java笔记\mybatis笔记.assets\kuangstudy7f3f8e72-a720-489f-a8b9-b7258aa72cdc-1627263018627.png)
+![img](https://github.com/xslorry/lorry_javaNotebook.github.io/blob/main/mybatis%E7%AC%94%E8%AE%B0.assets/kuangstudy7f3f8e72-a720-489f-a8b9-b7258aa72cdc-1627263018627.png)
 
 ## 自定义缓存-ehcache
 
